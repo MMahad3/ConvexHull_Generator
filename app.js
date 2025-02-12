@@ -1,4 +1,4 @@
-//-------------------------------------------------------------------------------------------------------
+//Algorithm Project
 function AngleCheck(p1, p2, p3) {
   var x = (p3[1] - p1[1]) * (p2[0] - p1[0]) - (p2[1] - p1[1]) * (p3[0] - p1[0]);
   if (x > 0)
@@ -543,59 +543,12 @@ async function Sweep_Line_Intersection(d)
     let ans = 0;
 
 
-    // let S =[];
-    // let ans = 0;
-    // for(let i = 0; i < d.length; i++)
-    // {
-    //   let c = events[i];
-    //   let index = c[2];
-    //   if(c[1])
-    //   {
-        
-
-    //     let flag = false;
-    //     if(){}
-    //     if(){}
-    //     if(){}
-
-    //     if(!await Included(c, c[0][0], c[0][1])) S.push(c);
-    //   }
-    //   else
-    //   {
-
-    //   }
-    // }
+    0][0], c[0][1])) S.push(c);
+    
   }
 }
-// async function Bentley_Ottoman(d)
-// {
-//   str = "Bentley Ottoman Algorithm";
-//   istr = "O()";
-//   if(!(d.length % 2))
-//   {
-//     let events = [];
-//     for(let i = 0; i < d.length; i+=2)
-//     {
-//       if(d[i][0] === d[i+1][0])
-//         events.push([d[i],d[i+1],2]);
-//       else
-//       {
-//         events.push([d[i],d[i+1],0]);
-//         events.push([d[i],d[i+1],1]);
-//       }
-//     }
-//     events.sort((a,b) => a[0][0] - b[0][0]);
-//     let S = [];
-//     for(let i = 0; i < events.length; i++)
-//     {
-//       if(events[i][2] === 0)
-//         if(!await Included(S, events[i][0][0], events[i][0][1])) S.push(events[i][0]);
-//       else if(events[i][2] === 1) {}
-//       else {}
-//     }
-//   }
-// }
-//-------------------------------------------------------------------------------------------------------
+s.length; i++)
+
 
 var w = 1200;
 var h = 600;
@@ -678,7 +631,7 @@ d2 = [
   [879, 145],
   [849, 433],
 ];
-var x;//-------------------------------------
+var x;
 let i = 0;
 
 async function reset(check, research)
@@ -785,8 +738,8 @@ function ShowGrid()
     .attr("y1", 0)
     .attr("x2", width)
     .attr("y2", 0)
-    .attr("stroke", "#9ca5aecf") // line color
-    .attr("stroke-dasharray","4") // make it dashed;;
+    .attr("stroke", "#9ca5aecf") 
+    .attr("stroke-dasharray","4") 
 
     d3.selectAll("g.xAxis g.tick")
     .append("line")
@@ -795,8 +748,8 @@ function ShowGrid()
     .attr("y1", -height)
     .attr("x2", 0)
     .attr("y2", 0)
-    .attr("stroke", "#9ca5aecf") // line color
-    .attr("stroke-dasharray","4") // make it dashed;
+    .attr("stroke", "#9ca5aecf") 
+    .attr("stroke-dasharray","4") 
   }
   else
   {
@@ -805,9 +758,7 @@ function ShowGrid()
 }
   var mouseover = function(d) {
     Tooltip.style("opacity", 1)
-    // d3.select(this)
-    // .style("stroke", "black")  
-    // .style("opacity", 1)
+    
   }
   var mousemove = function(event, d) {
     Tooltip.html(`(${Math.trunc(d3.select(this).attr("cx"))},${Math.trunc(h-d3.select(this).attr("cy"))})`)
@@ -819,9 +770,7 @@ function ShowGrid()
     .html('')
     .style("left", 0)
     .style("top", 0)
-    // d3.select(this)
-    // .style("stroke", "none")
-    // .style("opacity", 0.8)
+    
   }
 async function createCircles()
 {
@@ -979,38 +928,10 @@ function JMGuide()
   {
     svg.selectAll("#GuideCircle").remove();
   }
-  // let temp;
-  // if(i < x.length-1)
-  //   temp = x.filter((e, j) => i <= j+1 && i >= j-1);
-  // else if (i === x.length-1)
-  //   temp = [x[x.length-2],x[x.length-1],x[0]];
-  // if(temp !== undefined)
-  // {
-  //   console.log(i,temp);
-  //   let guidepath = svg.append('path')
-  //   .attr("stroke", "black")
-  //   .attr("stroke-width", "2")
-  //   .attr("stroke-linecap", "round")
-  //   .attr("fill", "none")
-  //   .attr("id", `gp${i}`)
-  //   .attr("d", `M${temp[0][0]} ${h-temp[0][1]} L${temp[1][0]} ${h-temp[1][1]} L${temp[2][0]} ${h-temp[2][1]}`);
-
-  //   var length = guidepath.node().getTotalLength();
-  //   guidepath.attr("stroke-dasharray", length + " " + length)
-  //   .attr("stroke-dashoffset", length)
-  //   .transition()
-  //   .ease(d3.easeLinear)
-  //   .attr("stroke-dashoffset", 0)
-  //   .duration(1000)
-
-  //   var val = i-1;
-  //   setTimeout(() => {
-  //     svg.select(`#gp${val}`)
-  //     .remove()
-  //   }, 3000);
+  
     i++;
     i%=dataset.length;
-  // }
+  
 }
 
 function openNav() {
@@ -1018,7 +939,6 @@ function openNav() {
   document.getElementById("main").style.marginLeft = "1172px";
 }
 
-/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "1422px";
